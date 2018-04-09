@@ -1,25 +1,30 @@
 import React, { Component } from "react";
+
 class Card extends Component {
   state = {};
   render() {
     return (
-      <div className="row">
-        <div className="col s12 m6">
-          <div className="card">
-            <div className="card-image">
-              <span className="card-title">Card Title</span>
-              <a className="btn-floating halfway-fab waves-effect waves-light red">
-                <i className="material-icons">add</i>
-              </a>
-            </div>
-            <div className="card-content">
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-          </div>
+      <div className="card sticky-action">
+        <div className="card-image waves-effect waves-block waves-light">
+          <img
+            className="activator"
+            src="http://materializecss.com/images/office.jpg"
+          />
+        </div>
+        <div className="card-content">
+          <span className="card-title activator grey-text text-darken-4">
+            Title<i className="material-icons right">more_vert</i>
+          </span>
+          <p>Description</p>
+        </div>
+        <div className="card-action">
+          <a href="#">More</a>
+        </div>
+        <div className="card-reveal">
+          <span className="card-title grey-text text-darken-4">
+            Card Title<i className="material-icons right">close</i>
+          </span>
+          <p>Details</p>
         </div>
       </div>
     );

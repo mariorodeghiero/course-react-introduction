@@ -2,6 +2,22 @@ import React, { Component } from "react";
 class Navbar extends Component {
   state = {};
   render() {
+    let menu = [
+      { title: "Home", link: "#home" },
+      { title: "About Me", link: "#about" },
+      { title: "Contact", link: "#contatc" }
+    ];
+
+    let list = menu.map(function(value, index) {
+      return (
+        <li key={index}>
+          <a href={value.link} className="black-text">
+            {value.title}
+          </a>
+        </li>
+      );
+    });
+
     return (
       <nav>
         <div className="nav-wrapper white ">
@@ -10,21 +26,7 @@ class Navbar extends Component {
               {this.props.titulo}
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down ">
-              <li>
-                <a href="sass.html" className="black-text">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="badges.html" className="black-text">
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a href="collapsible.html" className="black-text">
-                  Contact
-                </a>
-              </li>
+              {list}
             </ul>
           </div>
         </div>
