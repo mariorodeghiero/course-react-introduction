@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
-import Card from "./components/Card";
+import CardList from "./components/Card-list";
 
 class App extends Component {
   render() {
@@ -8,11 +8,7 @@ class App extends Component {
       <div>
         <Navbar titulo="React" />
         <div className="container">
-          <div className="row">
-            <div className="col m4">
-              <Card />
-            </div>
-          </div>
+          <CardList qtdLine="3" sizeCol="4" />
         </div>
       </div>
     );
