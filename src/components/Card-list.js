@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import Search from "./Search";
 
 class CardList extends Component {
   state = {};
@@ -80,7 +81,14 @@ class CardList extends Component {
         </div>
       );
     });
-    return <div>{line}</div>;
+    return (
+      <div>
+        <div className="row">
+          <Search />
+        </div>
+        {line}
+      </div>
+    );
   }
 }
 
