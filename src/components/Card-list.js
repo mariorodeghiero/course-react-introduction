@@ -3,6 +3,15 @@ import Card from "./Card";
 import Search from "./Search";
 
 class CardList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { busca: "" };
+    this.updateSearch = this.updateSearch.bind(this);
+  }
+
+  updateSearch(e) {
+    this.setState({ busca: e.target.value });
+  }
   state = {};
   render() {
     let news = [
@@ -84,7 +93,7 @@ class CardList extends Component {
     return (
       <div>
         <div className="row">
-          <Search />
+          <Search updateSearch={this.updateSearch} busca={this.state.busca} />
         </div>
         {line}
       </div>
